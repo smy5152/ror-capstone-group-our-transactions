@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project : GROUP OUR TRANSACTIONS
+## PROJECT: GROUP Agile PO Activities
 > The project allows an Agile Product Owner to document his day to day activity with a few clicks instead of going through lengthy workflow applications. 
 Extra Feature: Duration & A monthly report provides a categorised timespent in each category everyday.
-## Scaffold for social media app with Ruby on Rails
+### Introduction
 > The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are grouped and listed in grouped and ungrouped lists, ordered most recent first.
 New GROUPS can be create by users to add more categorization to their daily activity. 
 #### Highlight: Users->List, Users->Invites Friends, Users->Gets Invited By Friends, 
