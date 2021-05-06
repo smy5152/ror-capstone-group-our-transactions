@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: smy-inc
+  api_key: '927285345633345'
+  api_secret: D6JMjzXBo-dMErxq7ja8Bp-2EnM
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: smy-inc
+  api_key: '927285345633345'
+  api_secret: D6JMjzXBo-dMErxq7ja8Bp-2EnM
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: smy-inc
+  api_key: '927285345633345'
+  api_secret: D6JMjzXBo-dMErxq7ja8Bp-2EnM
+  enhance_image_tag: true
+  static_file_support: false

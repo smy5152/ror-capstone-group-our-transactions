@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
+  root 'users#index'
+
   resources :tasks
   resources :groups
   resources :users
