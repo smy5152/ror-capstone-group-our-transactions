@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @group.name %>
+    <% if @group.icon.attached? %>
+    <%= cl_image_tag @group.icon.key, :width=>50, :crop=>"fill" %>
+    <% end %>
+</p>
+<p>
+    <strong>Name:</strong>
+    <%= @group.name %>
 </p>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |

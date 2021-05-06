@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: proxima-bold;
+  src: url(../../assets/fonts/ProximaNovaBold.otf);
+}
+
+@font-face {
+  font-family: proxima-light;
+  src: url(../../assets/fonts/ProximaNovaCondensedLight.otf);
+}
+
+body {
+  font-family: "proxima-light", sans-serif;
+}

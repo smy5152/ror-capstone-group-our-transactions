@@ -1,3 +1,4 @@
 class Group < ApplicationRecord
-      has_one_attached :avatar
+  belongs_to :user, class_name: "User"
+  has_one_attached :icon
 end
