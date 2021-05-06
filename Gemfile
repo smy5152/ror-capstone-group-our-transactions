@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'devise'
 
 gem 'cloudinary'
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
