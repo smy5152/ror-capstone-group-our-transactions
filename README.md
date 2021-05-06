@@ -2,13 +2,12 @@
 
 ## PROJECT: GROUP Agile PO Activities
 > The project allows an Agile Product Owner to document his day to day activity with a few clicks instead of going through lengthy workflow applications. 
-Extra Feature: Duration & A monthly report provides a categorised timespent in each category everyday.
+> Extra Feature: Duration & A monthly report provides a categorised report of timespent in each category everyday.
 ### Introduction
 > The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are grouped and listed in grouped and ungrouped lists, ordered most recent first.
 New GROUPS can be create by users to add more categorization to their daily activity. 
 #### Highlight: Users->List, Users->Invites Friends, Users->Gets Invited By Friends, 
 ![DESIGN](docs/ERD.png)
-![TESTS](docs/Relations.PNG)
 
 ![APPLICATION]()
 
@@ -17,7 +16,7 @@ New GROUPS can be create by users to add more categorization to their daily acti
 
 - Ruby, Ruby on Rails, VS Code Editor
 - Active Records
-- Devise Gem
+- Cloudinary for img uploads
 - Forms & Helpers
 - Rspec, Capybara, Selenium
 - Browser: Chrome {change/override in this File, Last Line: ``` spec\rails_helper.rb ```}
@@ -77,5 +76,6 @@ Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 ## Acknowledgments
 - [Micoverse team](https://www.microverse.org/)
+- The design of the project was inspired by [GregoireVella](https://www.behance.net/gregoirevella)
 ## 📝 License
 This project is [MIT](LICENSE) licensed.
