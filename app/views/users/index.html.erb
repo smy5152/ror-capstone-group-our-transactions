@@ -3,25 +3,35 @@
 <h1>Users</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <tbody>
+        <% @users.each do |user| %>
+        <tr>
+            <td>
+                <% if user.avatar.attached? %>
+                <%= cl_image_tag user.avatar.key, :width=>20, :crop=>"fill" %>
+                <% end %>
+            </td>
+            <td><%= link_to user.name, user %></td>
+            <td><%= user.email %></td>
+            <%
+=begin%>
+ <td><%= link_to 'Show', user %></td> 
+<%
+=end%>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
 </table>
 
 <br>

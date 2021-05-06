@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+    <% if @user.avatar.attached? %>
+    <%= cl_image_tag @user.avatar.key, :width=>50, :crop=>"fill" %>
+    <% end %>
+</p>
+<p>
+    <strong>Name:</strong>
+    <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+    <strong>Email:</strong>
+    <%= @user.email %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
