@@ -1,0 +1,10 @@
+<p>AgileTasks</p>
+<span class="text-white proxima-bold"> <%= yield(:title) %></span>
+            
+<%=link_to image_tag(current_user.avatar, style:"width:120px; height:120px;"), user_path(current_user)%>
+<%=link_to 'Groups', groups_path%>
+<%=link_to 'Edit your profile', edit_user_path(current_user)%>
+<%=link_to 'Log out', logout_path%>
+    <p class="text-center">
+      <strong class="text-grey text-center">Agile Tasks & Activities</strong>
+    </p>

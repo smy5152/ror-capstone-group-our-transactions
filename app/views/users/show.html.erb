@@ -1,3 +1,4 @@
+<% provide(:title, "#{@user.name}") %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,14 +7,17 @@
     <% end %>
 </p>
 <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
+    <%="Hello, #{current_user.name.titlecase}"%>
 </p>
-
 <p>
-    <strong>Email:</strong>
-    <%= @user.email %>
+    <%
+=begin%>
+ <%=link_to 'Groups', groups_path%> 
+<%
+=end%>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+    <%=link_to 'Log out', logout_path%>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    <p class="text-center">
+      <strong class="text-grey text-center">Agile Tasks & Activities</strong>
+    </p>

@@ -1,2 +1,7 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Login</h1>
+<%= form_tag '/login', :id => 'new_session' do %>
+  <%= label_tag 'Name',''%>
+  <%= text_field_tag :name, nil, placeholder: 'Login Name' %>
+  <hr>
+  <%= submit_tag 'Login',class: 'btn btn-primary'%>
+<%end%>
