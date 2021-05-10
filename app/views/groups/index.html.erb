@@ -1,32 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Groups</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th colspan="3"></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <% @groups.each do |group| %>
-        <tr>
-            <td>
-                <% if group.icon.attached? %>
-                <%= cl_image_tag group.icon.key, :width=>20, :crop=>"fill" %>
-                <% end %>
-            </td>
-            <td><%= link_to group.name, group %></td>
-            <td><%= link_to 'Edit', edit_group_path(group) %></td>
-            <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Group', new_group_path %>
+<% provide(:title, "Groups") %>
+<div class="total-task d-flex flex-column px-2 position-relative">
+    <div class="task-total fw-bold d-flex justify-content-center align-items-center mt-1 mb-4">
+        <span class="me-2">
+            Groups:<%=@groups.count%>
+        </span>
+    </div>
+    <%= render 'group' %>
+    <div class="new-task-btn text-center bg-succes position-fixed d-flex align-items-center justify-content-center">
+        <%= link_to 'New Group', new_group_path, class:'text-white text-decoration-none new-task' %>
+    </div>
+</div>

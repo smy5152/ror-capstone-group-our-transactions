@@ -7,7 +7,7 @@
         </div>
         <div class="col-8">
             <div class="card-body h-100">
-                <h5 class="card-title d-flex justify-content-between"><span><%= task.name %> </span><span class="fw-bold">Hr<%= task.amount %></span> </h5>
+                <h5 class="card-title d-flex justify-content-between"><span><%= task.name %> </span><span class="fw-bold"><%= task.amount %></span> Hr(s)</h5>
                 <p class="card-text position-relative card-date d-flex justify-content-between"><small class="text-muted"><%=verbose_date(task.created_at) %></small><%= link_to task do%>
                     <i class="bi bi-eye-fill text-secondary"></i>
                     <% end %>

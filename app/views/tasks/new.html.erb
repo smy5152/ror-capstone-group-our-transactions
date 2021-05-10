@@ -1,11 +1,9 @@
 <% provide(:title, "Tasks") %>
 <div class="container d-flex flex-column justify-content-center align-items-center">
     <h1 class="my-5 text-center create-new ">New Task</h1>
-    <%= link_to  'javascript:history.back()', class:"card-link text-decoration-none my-3" do %>
+    <%= link_to tasks_path, class:"card-link text-decoration-none my-3" do %>
     <i class="bi bi-arrow-left-square text-dark"></i>
     <% end %>
+
+    <%= render 'form', task: @task %>
 </div>
-
-<%= render 'form', task: @task %>
-
-<%= link_to 'Back', tasks_path %>
