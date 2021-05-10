@@ -1,27 +1,35 @@
 <%= form_with(model: task) do |form| %>
   <% if task.errors.any? %>
-    <div id="error_explanation">
+  <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
       <ul>
-        <% task.errors.each do |error| %>
+          <% task.errors.each do |error| %>
           <li><%= error.full_message %></li>
-        <% end %>
+          <% end %>
       </ul>
-    </div>
+  </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+      <%= form.label :name,style:"display:none" %>
+      <%= form.text_field :name,placeholder:'Name your Task' %>
+      <hr>
   </div>
 
   <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+      <%= form.label :amount, style:"display:none" %>
+      <%= form.number_field :amount, placeholder:'Hours Spent' %>
+      <hr>
+  </div>
+
+  <div class="field">
+      <%= form.label :group_id, class: 'input-group-text' %>
+      <%= form.collection_select(:group_id, Group.all.order(:name), :id, :name, {include_blank: true}, {class: 'group-select w-100'}) %>
+      <hr>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+      <%= form.submit class:"btn btn-primary"%>
   </div>
 <% end %>

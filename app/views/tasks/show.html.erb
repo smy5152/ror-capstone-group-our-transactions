@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, "Tasks") %>
+<div class="container d-flex justify-content-center">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            <%= @task.name %>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Duration: <%= @task.amount %> Hours</h5>
+            <%= link_to 'javascript:history.back()',class:"text-decoration-none" do %>
+            <i class="bi bi-arrow-left-square text-dark"></i>
+            <% end %>
+            <%= link_to @task, method: :delete, data: { confirm: 'Are you sure you wnat to remove this task?'} do %>
+            <i class="bi bi-trash text-dark"></i>
+            <% end %>
+        </div>
+        <div class="card-footer text-muted">
+            Created by: <%= @task.author.name %><br />
+            When: <%=time_ago_in_words(@task.created_at.localtime)%>
+        </div>
+    </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @task.name %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @task.amount %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Edit', edit_task_path(@task) %>
 <%= link_to 'Back', tasks_path %>

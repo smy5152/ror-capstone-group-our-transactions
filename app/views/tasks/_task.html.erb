@@ -1,0 +1,19 @@
+<% @tasks.each do |task| %>
+
+<div class="card mb-3 align-self-center " style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-4">
+            <%=display_icon(task.group, task)%>
+        </div>
+        <div class="col-8">
+            <div class="card-body h-100">
+                <h5 class="card-title d-flex justify-content-between"><span><%= task.name %> </span><span class="fw-bold">Hr<%= task.amount %></span> </h5>
+                <p class="card-text position-relative card-date d-flex justify-content-between"><small class="text-muted"><%=verbose_date(task.created_at) %></small><%= link_to task do%>
+                    <i class="bi bi-eye-fill text-secondary"></i>
+                    <% end %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
