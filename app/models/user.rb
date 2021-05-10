@@ -1,7 +1,10 @@
 class User < ApplicationRecord
-  validates :name, presence: true, length: { in: 6..10 }
+  validates :name, presence: true, length: { in: 6..10 }, uniqueness: true
   has_one_attached :avatar
+  has_many :groups, class_name: 'Group', foreign_key: 'user_id'
+  has_many :tasks, class_name: 'Task', foreign_key: 'author_id'
 
-  has_many :groups
-  has_many :tasks
+  def ungrouped_tasks_from_user()
+    Task.includes(:author).where(group_id: nil).where(author_id: current_user.id)
+  end
 end

@@ -1,17 +1,29 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[show edit update destroy]
+  before_action :authenticate
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = if params[:ungrouped]
+              current_user.ungrouped_activities_from_user(current_user.id)
+             else
+              current_user.tasks.all
+             end
+    # puts 'Tasks'
   end
 
   # GET /tasks/1 or /tasks/1.json
-  def show; end
+  def show
+    @task = Task.find(params[:id])
+    @groups = @task.group.nil? ? nil : @task.group
+  end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    @groups = Group.all
+    @groups_array = create_groups_array
+    @tasks_created = tasks_created
   end
 
   # GET /tasks/1/edit
@@ -20,6 +32,7 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = Task.new(task_params)
+    @task.author_id = current_user.id
 
     respond_to do |format|
       if @task.save
@@ -56,6 +69,13 @@ class TasksController < ApplicationController
 
   private
 
+  def authenticate
+    return if logged_in?
+
+    flash[:alert] = 'You need to login or sign up to access'
+    redirect_to '/log'
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_task
     @task = Task.find(params[:id])
@@ -63,6 +83,15 @@ class TasksController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def task_params
-    params.require(:task).permit(:name, :amount)
+    params.require(:task).permit(:name, :amount, :group_id)
+  end
+
+  def tasks_created
+    Task.ascending.pluck(:name)
+  end
+
+  def create_groups_array
+    arr = Group.all.pluck(:name, :id)
+    arr.insert(0, ['No group', nil])
   end
 end
