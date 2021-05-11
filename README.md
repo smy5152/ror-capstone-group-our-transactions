@@ -77,5 +77,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - [Micoverse team](https://www.microverse.org/)
 - The design of the project was inspired by [GregoireVella](https://www.behance.net/gregoirevella)
+- Slide Out from Left inspired by [Skelly](https://www.codeply.com/p/wJFoHhhkjB)
+- Nav Bar theme & template code from [Bootstrap](https://getbootstrap.com/docs/4.1/components/navbar/)
+- Robot User Profile Dummy Avatar [PikPng](https://www.pikpng.com/pngvi/xiihwh_robot-user-profile-dummy-avatar-person-ai-svg-png-icon-transparent-ai/)
+- Icons made by [Flaticon](https://www.flaticon.com/authors/eucalyp)
 ## 📝 License
 This project is [MIT](LICENSE) licensed.

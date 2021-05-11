@@ -6,6 +6,11 @@
         </span>
     </div>
     <%= render 'group' %>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <%=  link_to 'javascript:history.back()', class:"card-link text-decoration-none my-3" do %>
+        <i class="bi bi-arrow-left-square text-dark"></i>
+        <% end %>
+    </div>
     <div class="new-task-btn text-center bg-succes position-fixed d-flex align-items-center justify-content-center">
         <%= link_to 'New Group', new_group_path, class:'text-white text-decoration-none new-task' %>
     </div>

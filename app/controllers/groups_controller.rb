@@ -60,7 +60,7 @@ class GroupsController < ApplicationController
   def authenticate
     return if logged_in?
 
-    flash[:alert] = 'You need to login or sign up to access'
+    flash[:alert] = 'You need to Sign In or register as a New User to continue'
     redirect_to '/log'
   end
 

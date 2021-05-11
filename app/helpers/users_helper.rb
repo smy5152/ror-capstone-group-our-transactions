@@ -1,6 +1,6 @@
 module UsersHelper
   def avatar_url_for_user
-    @user.avatar.nil? ? 'docs/nousericon.png' : @user.avatar.to_s
+    current_user.avatar.key.nil? ? 'No-profile-icon.png' : current_user.avatar
   end
 
   def extra_feature_hours_message; end

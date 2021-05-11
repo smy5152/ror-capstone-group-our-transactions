@@ -5,17 +5,17 @@
     <li><%= error.full_message %></li>
     <% end %>
 </ul>
-
-<div class="">
-    <%= form.label :icon %>
-    <%= form.file_field :icon %>
+<div class="field">
+    <%= form.label :icon,style:"display:none" %>
+    <%= form.file_field :icon, direct_upload: true, accept: "image/jpeg, image/gif, image/png" %>
+    <hr>
 </div>
 <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name,style:"display:none" %>
+    <%= form.text_field :name,placeholder:"Group name" %>
+    <hr>
 </div>
-
 <div class="actions">
-    <%= form.submit %>
+    <%= form.submit  class:"btn btn-primary" %>
 </div>
 <% end %>

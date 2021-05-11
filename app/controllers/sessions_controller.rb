@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "You logged in succesfully as #{@user.name}"
       redirect_to user_path(current_user)
     else
-      flash[:alert] = 'Please enter an existing username or create an account'
+      flash[:alert] = 'Please Sign In or create a New User'
       redirect_to '/login'
     end
   end

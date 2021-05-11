@@ -1,7 +1,7 @@
 <% provide(:title, "#{@user.name}") %>
 <div class="d-flex flex-column align-items-center">
     <div class="user-thumb my-3">
-        <%=image_tag(@user.avatar, alt: 'Avatar', style:"width:100px; height:100px;")%>
+        <%=image_tag(avatar_url_for_user, alt: 'Avatar', style:"width:100px; height:100px;")%>
     </div>
     <div>
         <div>
@@ -37,5 +37,8 @@
         <p class="text-center">
             <strong class="text-white text-center m-2">Log 40 hours a week to achieve your goals.</strong>
         </p>
+    </div>
+    <div class="log-sign-btns jusitfy-self-end position-absolute bottom-0 bg-primary">
+        <%=link_to '', '', class:'btn sign-up-btn text-secondary'%>
     </div>
 </div>
