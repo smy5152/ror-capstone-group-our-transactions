@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   # GET /tasks or /tasks.json
   def index
     @tasks = if params[:ungrouped]
-               current_user.ungrouped_activities_from_user(current_user.id)
+               current_user.ungrouped_tasks_from_user(current_user.id)
              else
                current_user.tasks.all
              end
