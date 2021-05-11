@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :groups, class_name: 'Group', foreign_key: 'user_id'
   has_many :tasks, class_name: 'Task', foreign_key: 'author_id'
 
-  def ungrouped_tasks_from_user()
-    Task.includes(:author).where(group_id: nil).where(author_id: current_user.id)
+  def ungrouped_tasks_from_user(user_id)
+    Task.includes(:author).where(group_id: nil).where(author_id: user_id)
   end
 end

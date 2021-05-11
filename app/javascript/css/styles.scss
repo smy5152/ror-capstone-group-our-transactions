@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 @import "~bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
 
 $blue: #3778c2;
 $green: #5fb523;
@@ -20,7 +20,7 @@ body {
 }
 
 .create-new {
-  font-family: "Satisfy", sans-serif;
+  font-family: "Niconne", sans-serif;
 }
 
 .notice-box {
@@ -51,27 +51,31 @@ nav {
   border-bottom-left-radius: 1rem;
   font-family: "proximaligth", sans-serif;
 
-  .navbar-toggler-icon {
-    opacity: 0.75;
-    -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-    -o-transition: opacity 0.3s ease, -o-transform 0.3s ease;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      -webkit-transform 0.3s ease,
-      -o-transform 0.3s ease;
+    .navbar-collapse {
+        z-index: 999;
+        background-color: $blue;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 75%;
+    }
 
-    &:hover {
-      opacity: 1;
-      -webkit-transform: scale(1.2) rotate(270deg);
-      -ms-transform: scale(1.2) rotate(270deg);
-      -o-transform: scale(1.2) rotate(270deg);
-      transform: scale(1.2) rotate(270deg);
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
     }
   }
 
@@ -94,7 +98,7 @@ nav {
       background-color: #093f7c;
     }
   }
-}
+
 
 .login-app-name {
   height: 70vh;
@@ -208,7 +212,7 @@ nav {
   }
 }
 
-.bi-cash {
+.bi-people-fill {
   @extend .bi-box-arrow-left;
 }
 
@@ -220,7 +224,7 @@ nav {
   @extend .bi-box-arrow-left;
 }
 
-.bi-cash-stack {
+.bi-list-stars {
   @extend .bi-box-arrow-left;
 }
 
