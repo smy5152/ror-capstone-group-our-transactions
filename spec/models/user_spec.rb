@@ -1,5 +1,4 @@
 RSpec.describe User, type: :model do
-
   let(:name) { 'username' }
   let(:user) { User.create(name: 'pingpong', email: 'ping@pong.com') }
   let(:user2) { User.create(name: 'rspecer', email: 'rock@star.com') }
