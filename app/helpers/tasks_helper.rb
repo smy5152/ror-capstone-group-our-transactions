@@ -7,6 +7,6 @@ module TasksHelper
 
   def total_tasks_hours(tasks)
     total = tasks.inject(0) { |acum, task| acum + task.amount }
-    "#{total} Hours"
+    total
   end
 end
