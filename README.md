@@ -3,9 +3,8 @@
 ## PROJECT: GROUP Agile PO Activities
 > The project allows an Agile Product Owner to document his daily activity with a few clicks instead of going through lengthy workflow applications. 
 ### Introduction
-> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first.
-New GROUPS can be create by users to add more categorization to their daily activity. 
-#### Highlight: Users->List, Users->Invites Friends, Users->Gets Invited By Friends, 
+> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first. New GROUPS can be create by users to add more categorization to their daily activity. Groups are ordered alphabetically by name.
+
 ![DESIGN](docs/ERD.png)
 ![](docs/app-1.png)
 ![](docs/app-2-nav.png)
@@ -27,13 +26,14 @@ New GROUPS can be create by users to add more categorization to their daily acti
   - View Transactions Recorded by me
     - Add New with Group
     - Add New Ungrouped
-  - Duration of each grouped / ungrouped activity
+  - Duration (hours) of each grouped / ungrouped activity
 - Manage Groups
   - Add New Groups
 - Timeline
   - Transactions ordered Recent First
   - Transactions from Groups
-- Monthly Activity Report
+  - Transactions Ungrouped
+  - Groups ordered By Name Alpahbetically
 ### Setup
 * To clone this repository, open your Terminal and execute the following command:
 ``` git clone https://github.com/smy5152/ror-capstone-group-our-transactions.git ```
