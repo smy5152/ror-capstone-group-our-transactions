@@ -52,7 +52,7 @@ New GROUPS can be create by users to add more categorization to their daily acti
 * Launch Local App
 - Open your browser and type http://localhost:3000
 * Launch Live App
-- ``` (Taskify)[https://mytaskify.herokuapp.com/] ```
+- [Taskify][https://mytaskify.herokuapp.com/]
 ### How to run the test suite
 #### Run tests
 * Change into the folder
