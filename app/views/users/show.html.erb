@@ -1,0 +1,36 @@
+<% provide(:title, "#{@user.name}") %>
+<div class="d-flex flex-column align-items-center">
+    <div class="user-thumb my-3">
+        <%=image_tag(avatar_url_for_user, alt: 'Avatar', style:"width:100px; height:100px;")%>
+    </div>
+    <div>
+        <div>
+            <p class="text-center">
+                Total Hours: <%= total_tasks_hours(@user.tasks) %> <%= extra_feature_hours_message(total_tasks_hours(@user.tasks)) %>
+            <p>
+        </div>
+    </div>
+    <div class="user-profile-ul">
+        <ul class="list-group">
+            <div class="username text-white d-flex justify-content-center nav-link p-2 mt-3"> <%="Hello #{current_user.name.capitalize }"%></div>
+            <li class="list-group-item">
+                <%=link_to 'All My Tasks', tasks_path, class: 'nav-link d-flex justify-content-left bi bi-people-fill'%>
+            </li>
+            <li class="list-group-item">
+                <%=link_to 'All My External Tasks', tasks_path(ungrouped: true), class: 'nav-link d-flex justify-content-left bi bi-list-stars'%>
+            </li>
+            <li class="list-group-item">
+                <%=link_to 'All Groups', groups_path, class: 'nav-link d-flex justify-content-left bi bi-collection-fill'%>
+            </li>
+            <li class="list-group-item">
+                <%=link_to 'Edit your profile', edit_user_path(current_user), class:'d-flex justify-content-left nav-link text-decoration-none bi bi-pencil-square'%>
+            </li>
+        </ul>
+        <p class="text-center">
+            <strong class="text-white text-center m-2">Log 40 hours a week to achieve your goals.</strong>
+        </p>
+    </div>
+    <div class="log-sign-btns jusitfy-self-end position-absolute bottom-0 bg-primary">
+        <%=link_to '', '', class:'btn sign-up-btn text-secondary'%>
+    </div>
+</div>

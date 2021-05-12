@@ -1,0 +1,18 @@
+<% @groups.each do |group| %>
+  <div class="card mb-3 align-self-center " style="max-width: 500px;">
+    <div class="row g-0">
+      <div class="col-4">
+        <%= image_tag( icon_url_for_group(group), class:"group-img") %>
+      </div>
+      <div class="col-8">
+        <div class="card-body h-100">
+          <h5 class="card-title d-flex justify-content-between"><span><%= group.name %> </span> </h5>
+          <p class="card-text position-relative card-date d-flex justify-content-between"><small class="text-muted"> Author: <%=verbose_date(group.created_at) %></small><%= link_to group do%>
+              <i class="bi bi-eye-fill text-secondary"></i>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<%= form_with(model: user) do |form|%>
+<%=show_errors(user)%>
+<ul>
+    <% user.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+</ul>
+<div class="field">
+    <%= form.label :avatar%>
+    <%= form.file_field :avatar, direct_upload: true, accept: "image/jpeg, image/gif, image/png" %>
+    <hr>
+</div>
+<div class="field">
+    <%= form.label :name, style:"display:none" %>
+    <%= form.text_field :name, placeholder:"Name",class:"form-input" %>
+    <hr>
+</div>
+<div class="field">
+    <%= form.label :email, style:"display:none" %>
+    <%= form.text_field :email,placeholder:"Email",class:"form-input" %>
+    <hr>
+</div>
+<div class="actions">
+    <%= form.submit class:"btn btn-primary" %>
+</div>
+<% end %>

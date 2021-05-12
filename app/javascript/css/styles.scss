@@ -1,0 +1,335 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
+
+$blue: #3778c2;
+$green: #5fb523;
+$gray: #434b54;
+
+body {
+  background-color: #f1f3f2;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.proxima-bold {
+  font-family: "proximabold", sans-serif;
+}
+
+.proxima-light {
+  font-family: "proximalight", sans-serif;
+}
+
+.create-new {
+  font-family: "Niconne", sans-serif;
+}
+
+.notice-box {
+  height: 30px;
+  color: rgb(14, 106, 5);
+  background-color: rgb(113, 211, 104);
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  margin: 5px 0;
+}
+
+.alert-box {
+  height: 43px;
+  color: rgb(132, 6, 6);
+  background-color: rgb(237, 69, 69);
+  border-radius: 1rem;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+nav {
+  background-color: $blue;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  font-family: "proximaligth", sans-serif;
+
+  .navbar-collapse {
+    z-index: 999;
+    background-color: $blue;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+}
+
+.username {
+  border: 2px solid #093f7c;
+  border-radius: 1rem;
+  font-size: 12px;
+}
+
+.user-thumb {
+  img {
+    border: 3px solid #093f7c;
+  }
+}
+
+.nav-link {
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: #093f7c;
+  }
+}
+
+.login-app-name {
+  height: 70vh;
+
+  p {
+    font-size: 40px;
+  }
+}
+
+.log-sign-btns {
+  font-family: "proximalight", sans-serif;
+  width: 98%;
+
+  .log-in-btn {
+    width: 100%;
+    text-align: center;
+    background: $blue;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #186bcb;
+    }
+  }
+
+  .sign-up-btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+
+    &:hover {
+      background: white;
+    }
+  }
+}
+
+/* task cards */
+
+.total-task {
+  margin-bottom: 65px;
+}
+
+.task-total {
+  font-family: "proximabold", sans-serif;
+  height: 60px;
+  background-color: white;
+  box-shadow: 2px 2px 4px #0000007d;
+  border-radius: 1rem;
+}
+
+.group-img {
+  width: 90%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.card {
+  font-family: "proximaligth", sans-serif;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px #0000007d;
+  max-width: 710px;
+  min-width: 300px;
+
+  &-header {
+    font-family: "proximabold", sans-serif;
+  }
+
+  .card-body {
+    padding: 2rem 1rem;
+  }
+
+  .card-date {
+    bottom: -30px;
+  }
+}
+
+.new-task-btn {
+  font-family: "proximaligth", sans-serif;
+  background: $green;
+  border-radius: 0.5rem;
+  height: 60px;
+  align-self: center;
+  bottom: 4px;
+  width: 96%;
+
+  &:hover {
+    background: #8fe355;
+  }
+
+  .new-task {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid;
+    border-radius: 0.5rem;
+  }
+}
+
+/* task card show */
+.bi-box-arrow-left {
+  &::before {
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  display: inline-block;
+  transform: translateY(0);
+
+  &:hover {
+    text-shadow: 3px 7px 2px #000;
+    transform: translateY(-5px);
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+  }
+}
+
+.bi-people-fill {
+  @extend .bi-box-arrow-left;
+}
+
+.bi-pencil-square {
+  @extend .bi-box-arrow-left;
+}
+
+.bi-collection-fill {
+  @extend .bi-box-arrow-left;
+}
+
+.bi-list-stars {
+  @extend .bi-box-arrow-left;
+}
+
+.bi-eye-fill {
+  display: inline-block;
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+  }
+}
+
+/* forms */
+form {
+  font-family: "proximaligth", sans-serif;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 20px;
+
+  input {
+    border: none;
+    width: 100%;
+  }
+}
+
+/* user profile */
+.user-profile-ul {
+  font-family: "proximaligth", sans-serif;
+  background-color: $blue;
+  border-radius: 1rem;
+
+  li:hover {
+    background-color: $blue;
+
+    a {
+      color: white;
+    }
+  }
+
+  strong {
+    font-size: 12px;
+    font-family: "proximabold", sans-serif;
+  }
+}
+
+// DARK MODE / Switch
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}

@@ -1,0 +1,21 @@
+<%= form_with(model: group) do |form| %>
+<%=show_errors(group)%>
+<ul>
+    <% group.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+</ul>
+<div class="field">
+    <%= form.label :icon,style:"display:none" %>
+    <%= form.file_field :icon, direct_upload: true, accept: "image/jpeg, image/gif, image/png" %>
+    <hr>
+</div>
+<div class="field">
+    <%= form.label :name,style:"display:none" %>
+    <%= form.text_field :name,placeholder:"Group name" %>
+    <hr>
+</div>
+<div class="actions">
+    <%= form.submit  class:"btn btn-primary" %>
+</div>
+<% end %>
