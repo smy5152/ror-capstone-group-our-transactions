@@ -1,19 +1,17 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## PROJECT: GROUP Agile PO Activities
-> The project allows an Agile Product Owner to document his day to day activity with a few clicks instead of going through lengthy workflow applications. 
-> Extra Feature: Duration & A monthly report provides a categorised report of timespent in each category everyday.
+> The project allows an Agile Product Owner to document his daily activity with a few clicks instead of going through lengthy workflow applications. 
 ### Introduction
-> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are grouped and listed in grouped and ungrouped lists, ordered most recent first.
+> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first.
 New GROUPS can be create by users to add more categorization to their daily activity. 
 #### Highlight: Users->List, Users->Invites Friends, Users->Gets Invited By Friends, 
 ![DESIGN](docs/ERD.png)
-
-![APPLICATION]()
-
-
+![](docs/app-1.png)
+![](docs/app-2-nav.png)
+![](docs/app-3-groups.png)
+![](docs/app-4-tasks.png)
 ### Built With
-
 - Ruby, Ruby on Rails, VS Code Editor
 - Active Records
 - Cloudinary for img uploads
@@ -53,16 +51,17 @@ New GROUPS can be create by users to add more categorization to their daily acti
 ``` rails server ``` 
 * Launch Local App
 - Open your browser and type http://localhost:3000
+* Launch Live App
+- ``` (Taskify)[https://mytaskify.herokuapp.com/] ```
 ### How to run the test suite
 #### Run tests
+* Change into the folder
+``` cd ror-capstone-group-our-transactions ```
+* Run the command
 ``` rpsec --format documentation  ```
 #### USER: CREATE, TRANSACTIONS: ADD/Group, ADD/Ungrouped, Create New GROUP
-
-
-
 #### BROWSER TEST: With Capybara/Selenium
-
-### How To:
+### How To Test:
 * Run Rails console
 ``` rails console ```
 ## Authors

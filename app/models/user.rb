@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  # after_create :default_avatar
   validates :name, presence: true, length: { in: 6..10 }, uniqueness: true
   has_one_attached :avatar
   has_many :groups, class_name: 'Group', foreign_key: 'user_id'

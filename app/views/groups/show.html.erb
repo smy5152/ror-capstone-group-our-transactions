@@ -1,7 +1,7 @@
 <% provide(:title, "Groups") %>
 <div class="container justify-content-center d-flex ">
     <div class="card my-5" style="width: 18rem;">
-        <%=image_tag(@group.icon,style:"border-radius:1rem;")%>
+        <%=image_tag(icon_url_for_group(@group),style:"border-radius:1rem;")%>
         <div class="card-body crd-bdy">
             <h5 class="card-title text-center mb-5"> <%= @group.name %></h5>
             <p class="m-0">Tasks:</p>

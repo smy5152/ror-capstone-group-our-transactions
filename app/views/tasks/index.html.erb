@@ -4,15 +4,7 @@
         <span class="me-2">
             Tasks: <%=@tasks.count%>
         </span>
-        Total Hours:<% if total_tasks_hours(@tasks) >= 40 %>
-        <span class="text-success text-center m-2"><%= total_tasks_hours(@tasks) %>
-            <strong>Good Job.</strong>
-        </span>
-        <% else %>
-        <span class="text-danger text-center m-2"><%= total_tasks_hours(@tasks) %>
-            <strong>(Log your tasks)</strong>
-        </span>
-        <% end %>
+        Total Hours: <%= total_tasks_hours(@tasks) %> <%= extra_feature_hours_message(total_tasks_hours(@tasks)) %>
     </div>
     <%= render 'task' %>
     <div class="container d-flex flex-column justify-content-center align-items-center">
