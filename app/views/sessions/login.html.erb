@@ -1,0 +1,9 @@
+  <div class="login-app-name d-flex flex-column align-items-center justify-content-center">
+      <p class="create-new ">
+          Taskify&copy;
+      </p>
+      <div class="log-sign-btns jusitfy-self-end position-absolute bottom-0">
+          <%=link_to 'Sign In', login_path,class:'btn log-in-btn text-white', method: :get %>
+          <%=link_to 'New User', new_user_path,class:'btn sign-up-btn text-secondary', method: :get %>
+      </div>
+  </div>

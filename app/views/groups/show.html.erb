@@ -1,0 +1,26 @@
+<% provide(:title, "Groups") %>
+<div class="container justify-content-center d-flex ">
+    <div class="card my-5" style="width: 18rem;">
+        <%=image_tag(icon_url_for_group(@group),style:"border-radius:1rem;")%>
+        <div class="card-body crd-bdy">
+            <h5 class="card-title text-center mb-5"> <%= @group.name %></h5>
+            <p class="m-0">Tasks:</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <% @group.tasks.each do |task| %>
+            <li class="list-group-item d-flex justify-content-between" style="font-size:13px;">
+                <span class="d-flex flex-column"> <small class="text-muted">Name:</small> <%=task.name%></span>
+                <span class="d-flex flex-column"><small class="text-muted">Duration:</small><%=task.amount%> hrs</span>
+                <span class="d-flex flex-column"><small class="text-muted">Author:</small><%=task.author.name%></span>
+                <%= display_eye(task)%>
+            </li>
+            <% end %>
+        </ul>
+        <div class="card-body text-center">
+            <%= link_to 'javascript:history.back()', class:"card-link text-decoration-none" do %>
+            <i class="bi bi-arrow-left-square text-dark"></i>
+            <%=display_modify(@group)%>
+            <% end %>
+        </div>
+    </div>
+</div>

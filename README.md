@@ -1,23 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project : GROUP OUR TRANSACTIONS
-> The project allows an Agile Product Owner to document his day to day activity with a few clicks instead of going through lengthy workflow applications. 
-Extra Feature: Duration & A monthly report provides a categorised timespent in each category everyday.
-## Scaffold for social media app with Ruby on Rails
-> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are grouped and listed in grouped and ungrouped lists, ordered most recent first.
-New GROUPS can be create by users to add more categorization to their daily activity. 
-#### Highlight: Users->List, Users->Invites Friends, Users->Gets Invited By Friends, 
+## PROJECT: GROUP Agile PO Activities
+> The project allows an Agile Product Owner to document his daily activity with a few clicks instead of going through lengthy workflow applications. 
+### Introduction
+> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first. New GROUPS can be created by users to add more categorization to their daily activity. Groups are ordered alphabetically by name.
+
 ![DESIGN](docs/ERD.png)
-![TESTS](docs/Relations.PNG)
-
-![APPLICATION]()
-
-
+![](docs/app-1.png)
+![](docs/app-2-nav.png)
+![](docs/app-3-groups.png)
+![](docs/app-4-tasks.png)
 ### Built With
-
 - Ruby, Ruby on Rails, VS Code Editor
 - Active Records
-- Devise Gem
+- Cloudinary for img uploads
 - Forms & Helpers
 - Rspec, Capybara, Selenium
 - Browser: Chrome {change/override in this File, Last Line: ``` spec\rails_helper.rb ```}
@@ -30,13 +26,14 @@ New GROUPS can be create by users to add more categorization to their daily acti
   - View Transactions Recorded by me
     - Add New with Group
     - Add New Ungrouped
-  - Duration of each grouped / ungrouped activity
+  - Duration (hours) of each grouped / ungrouped activity
 - Manage Groups
   - Add New Groups
 - Timeline
   - Transactions ordered Recent First
   - Transactions from Groups
-- Monthly Activity Report
+  - Transactions Ungrouped
+  - Groups ordered By Name Alpahbetically
 ### Setup
 * To clone this repository, open your Terminal and execute the following command:
 ``` git clone https://github.com/smy5152/ror-capstone-group-our-transactions.git ```
@@ -54,16 +51,17 @@ New GROUPS can be create by users to add more categorization to their daily acti
 ``` rails server ``` 
 * Launch Local App
 - Open your browser and type http://localhost:3000
+* Launch Live App
+- [Taskify](https://mytaskify.herokuapp.com/)
 ### How to run the test suite
 #### Run tests
+* Change into the folder
+``` cd ror-capstone-group-our-transactions ```
+* Run the command
 ``` rpsec --format documentation  ```
 #### USER: CREATE, TRANSACTIONS: ADD/Group, ADD/Ungrouped, Create New GROUP
-
-
-
 #### BROWSER TEST: With Capybara/Selenium
-
-### How To:
+### How To Test:
 * Run Rails console
 ``` rails console ```
 ## Authors
@@ -77,5 +75,10 @@ Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 ## Acknowledgments
 - [Micoverse team](https://www.microverse.org/)
+- The design of the project was inspired by [GregoireVella](https://www.behance.net/gregoirevella)
+- Slide Out from Left inspired by [Skelly](https://www.codeply.com/p/wJFoHhhkjB)
+- Nav Bar theme & template code from [Bootstrap](https://getbootstrap.com/docs/4.1/components/navbar/)
+- Robot User Profile Dummy Avatar [PikPng](https://www.pikpng.com/pngvi/xiihwh_robot-user-profile-dummy-avatar-person-ai-svg-png-icon-transparent-ai/)
+- Icons made by [Flaticon](https://www.flaticon.com/authors/eucalyp)
 ## 📝 License
 This project is [MIT](LICENSE) licensed.

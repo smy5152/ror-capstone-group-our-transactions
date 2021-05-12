@@ -1,0 +1,6 @@
+<%= link_to edit_group_path(@group), class:"card-link text-decoration-none" do %>
+  <i class="bi bi-pencil text-dark "></i>
+<% end %>
+<%= link_to @group, method: :delete, data: { confirm: 'Are you sure?'}, class:"card-link text-decoration-none" do %>
+  <i class="bi bi-trash text-dark"></i>
+<% end %>

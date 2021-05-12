@@ -1,0 +1,42 @@
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+        <p class="navbar-brand create-new  m-0 p-0">Taskify&copy;</p>
+        <span class="text-white proxima-bold"> <%= yield(:title) %></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex flex-column align-items-center mt-4">
+                    <div class='user-thumb d-flex justify-content-center'>
+                        <%=link_to image_tag(avatar_url_for_user, style:"width:120px; height:120px;"), user_path(current_user)%>
+                    </div>
+                    <div class="username text-white d-flex justify-content-center nav-link p-2 my-3"> <%="Hello #{current_user.name.titlecase}. Did you log 40 hours this week?"%></div>
+                </li>
+                <li class="nav-item">
+                    <%=link_to 'All My Tasks', tasks_path, class: 'nav-link d-flex justify-content-left bi bi-people-fill'%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to 'All My External Tasks', tasks_path(ungrouped: true), class: 'nav-link d-flex justify-content-left bi bi-list-stars'%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to 'All Groups', groups_path, class: 'nav-link d-flex justify-content-left bi bi-collection-fill'%>
+                </li>
+                <li class="nav-item">
+                    <%=link_to 'Edit Profile', edit_user_path(current_user), class:'d-flex justify-content-left nav-link bi bi-pencil-square'%>
+                </li>
+                <li class="nav-item ">
+                    <%=link_to 'Log out', logout_path, class: 'nav-link d-flex justify-content-left bi bi-box-arrow-left'%>
+                </li>
+                <hr/>
+                <li class="nav-item">
+                    <label class="label label-inverse bg-gray">Dark Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" onclick="myFunction()">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
