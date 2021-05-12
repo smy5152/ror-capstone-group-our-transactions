@@ -3,7 +3,7 @@
 ## PROJECT: GROUP Agile PO Activities
 > The project allows an Agile Product Owner to document his daily activity with a few clicks instead of going through lengthy workflow applications. 
 ### Introduction
-> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first. New GROUPS can be create by users to add more categorization to their daily activity. Groups are ordered alphabetically by name.
+> The CAPSTONE in Ruby on Rails is the highlighted project of the RoR module. Implementation of a project where transactions are listed as grouped or ungrouped and ordered most recent first. New GROUPS can be created by users to add more categorization to their daily activity. Groups are ordered alphabetically by name.
 
 ![DESIGN](docs/ERD.png)
 ![](docs/app-1.png)
